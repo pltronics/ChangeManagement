@@ -1,0 +1,48 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="Test1">Test</button>  
+
+@if(isTest)
+{
+     <div class="modal" tabindex="-1" style="display:block" role="dialog"> 
+            <div class="modal-dialog"> 
+                <div class="modal-content"> 
+                    <div class="modal-header"> 
+                        <h3 class="modal-title">@modalTitle</h3>  
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+                        <button class="btn btn-primary" @onclick="Test2">Test</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+}
+
+@code {
+    int currentCount = 0;
+    string modalTitle;
+    Boolean isTest = false;
+
+    void IncrementCount()
+    {
+        if(!isTest)
+        { 
+        currentCount++;
+        }
+    }
+    void Test1()
+    {
+        this.modalTitle = "This is a Test Modal, Count = " + currentCount;
+        this.isTest = true;
+    }
+    void Test2()
+    {
+        this.isTest = false;
+    }
+}

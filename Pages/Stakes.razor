@@ -1,0 +1,45 @@
+@page "/stakes"
+
+@using ChangeManagement.Data
+@using ChangeManagement.Models
+@inject ChangeManagementService ChangeService
+
+@if (stakes == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <table class="table">
+        <thead class="sticky-top">
+            <tr>
+                <th>Stake</th>
+                <th>Question</th>
+                <th>Examples</th>
+                <th>Signers</th>
+            </tr>
+        </thead>
+        <tbody class="sticky-third">
+            @foreach (var stake in stakes)
+            {
+                <tr>
+                    <td>@stake.Description</td>
+                    <td>@stake.Question</td>
+                    <td>@stake.Examples</td>
+                    <td>@stake.Signers</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    IList<Stake> stakes = new List<Stake>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        stakes = await ChangeService.GetStakesAsync();
+    }
+
+}

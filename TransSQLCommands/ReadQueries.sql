@@ -1,0 +1,2 @@
+--Select s.Description, sq.Question, sq.Examples, ss.Signer from Stakes s LEFT JOIN StakeQuestions sq ON s.Id = sq.StakeId Left Join StakeSigners ss ON s.Id = ss.StakeId where (s.EndDate <= GetDate() OR s.EndDate IS NULL) AND (sq.EndDate <= GetDate() OR sq.EndDate IS NULL) AND (ss.EndDate <= GetDate() OR ss.EndDate IS NULL)
+Select c.Title, c.Description, c.CreatedOn, s.Description As 'RequiredSignatures', m.MtgDate, t.TargetDate From Changes c Join Signatures g ON c.Id = g.ChangeId  Join Stakes s on s.Id = g.StakeId
