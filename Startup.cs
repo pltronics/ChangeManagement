@@ -37,6 +37,8 @@ namespace ChangeManagement
             services.AddDbContext<StakeContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DbConn")));
+            services.AddHttpContextAccessor();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
