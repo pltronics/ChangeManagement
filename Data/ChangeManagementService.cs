@@ -25,11 +25,9 @@ namespace ChangeManagement.Data
         }
         public Task AddChangeAsync()
         {
-            return Task.FromResult(_context.Database.ExecuteSqlRaw("insert into dbo.Changes (Title, Description, Owner, CreatedOn, Status) Values ('New!Change!', 'Description3','the change owner4',GetDate(), 'NotCompleted' )"));
+            Console.WriteLine("AddingChange");
+            return Task.FromResult(_context.Database.ExecuteSqlRaw("insert into dbo.Changes (Title, Description, Owner, CreatedOn) Values ('New!Change!', 'Description3','the change owner4',GetDate())"));
         }
-        public Task<List<Stake>> GetStakesAsync()
-        {
-            return Task.FromResult(_context.Set<Stake>().FromSqlRaw("Select s.Description, sq.Question, sq.Examples, ss.Signer AS Signers from Stakes s LEFT JOIN StakeQuestions sq ON s.Id = sq.StakeId Left Join StakeSigners ss ON s.Id = ss.StakeId where (s.EndDate <= GetDate() OR s.EndDate IS NULL) AND (sq.EndDate <= GetDate() OR sq.EndDate IS NULL) AND (ss.EndDate <= GetDate() OR ss.EndDate IS NULL)").ToList());
-        }
+
     }
 }

@@ -33,6 +33,10 @@ namespace ChangeManagement
             services.AddDbContext<ChangeContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DbConn")));
+            services.AddScoped<StakesService>();
+            services.AddDbContext<StakeContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DbConn")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

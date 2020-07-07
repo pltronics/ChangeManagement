@@ -1,32 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Peyton\\BlazorProjects\\ChangeManagement\\ChangeManagement.csproj": {}
+    "C:\\Users\\plucas\\Git\\ChangeManagement\\ChangeManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Peyton\\BlazorProjects\\ChangeManagement\\ChangeManagement.csproj": {
+    "C:\\Users\\plucas\\Git\\ChangeManagement\\ChangeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Peyton\\BlazorProjects\\ChangeManagement\\ChangeManagement.csproj",
+        "projectUniqueName": "C:\\Users\\plucas\\Git\\ChangeManagement\\ChangeManagement.csproj",
         "projectName": "ChangeManagement",
-        "projectPath": "C:\\Users\\Peyton\\BlazorProjects\\ChangeManagement\\ChangeManagement.csproj",
-        "packagesPath": "C:\\Users\\Peyton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Peyton\\BlazorProjects\\ChangeManagement\\obj\\",
+        "projectPath": "C:\\Users\\plucas\\Git\\ChangeManagement\\ChangeManagement.csproj",
+        "packagesPath": "C:\\Users\\plucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\plucas\\Git\\ChangeManagement\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Peyton\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\plucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -37,11 +34,31 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.0.0, )"
+              "version": "[3.1.5, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -62,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100-preview9-014004\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
