@@ -1,0 +1,39 @@
+@page "/addchange"
+
+@using ChangeManagement.Data
+@using ChangeManagement.Models
+@using System.ComponentModel.DataAnnotations;
+@inject ChangeManagementService ChangeService
+
+<EditForm Model="change" OnValidSubmit="AddaChange">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group row">
+        <label class="col-8 col-form-label">Title:</label>
+        <InputText @bind-Value="change.Title" />
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Add Change</button>
+    </div>
+</EditForm>
+
+@code{
+    public class Change
+    {
+        [Required(ErrorMessage = "Title is required")]
+        public string Title {get; set;}
+    }
+
+    Change change = new Change();
+
+    protected override void OnInitialized()
+    {
+        change.Title = "";
+    }
+
+    protected async Task AddaChange()
+    {
+        Console.WriteLine("Button Pressed");
+        await ChangeService.AddChangeAsync();
+    }
+}

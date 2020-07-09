@@ -72,6 +72,13 @@ using ChangeManagement.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\plucas\Git\ChangeManagement\_Imports.razor"
+using System.DirectoryServices.ActiveDirectory;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {

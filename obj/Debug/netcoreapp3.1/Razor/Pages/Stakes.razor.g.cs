@@ -73,6 +73,13 @@ using ChangeManagement.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Users\plucas\Git\ChangeManagement\_Imports.razor"
+using System.DirectoryServices.ActiveDirectory;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\plucas\Git\ChangeManagement\Pages\Stakes.razor"
 using ChangeManagement.Data;
 

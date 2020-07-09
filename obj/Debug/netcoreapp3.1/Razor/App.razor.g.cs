@@ -72,6 +72,13 @@ using ChangeManagement.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 11 "C:\Users\plucas\Git\ChangeManagement\_Imports.razor"
+using System.DirectoryServices.ActiveDirectory;
+
+#line default
+#line hidden
+#nullable disable
     public partial class App : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
