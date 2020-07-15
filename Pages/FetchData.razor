@@ -7,33 +7,11 @@
 
 <h1>Changes 
 <button class="btn btn-primary" @onclick="ClearChanges">Clear List</button>
-<button class="btn btn-primary" @onclick="AddChange">Add Change</button>
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+<AddChange />
 </h1>
+
+
+
 <div id="table-wrapper">
 <div id="table-scroll">
 @if (changes == null)
@@ -46,20 +24,26 @@ else
     <table class="table">
         <thead class="sticky-top">
             <tr>
-                <th>Change ID</th>
+                <!--<th>Change ID</th>-->
                 <th>Title</th>
                 <th>Description</th>
+                <th>Owner</th>
                 <th>Created On</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody class="sticky-third">
             @foreach (var change in changes)
             {
                 <tr>
-                    <td>@change.Id</td>
+                    <!--<td>@change.Id</td>-->
                     <td>@change.Title</td>
                     <td>@change.Description</td>
+                    <td>@change.Owner</td>
                     <td>@change.CreatedOn</td>
+                    <td><button class="btn btn-primary" @onclick="(() => AddNotes(change.Id))">Add Notes</button></td>
+                    <td><button class="btn btn-primary">Sign Off</button></td>
                 </tr>
             }
         </tbody>
@@ -68,9 +52,9 @@ else
 </div>
 </div>
 
+
 @code {
     IList<Change> changes = new List<Change>();
-
     protected override async Task OnInitializedAsync()
     {
         changes = await ChangeService.GetChangesAsync();
@@ -80,10 +64,9 @@ else
         await ChangeService.DeleteChangesAsync();
         changes = await ChangeService.GetChangesAsync();
     }
-    protected async Task AddChange()
+    protected void AddNotes(int id)
     {
-        Console.WriteLine("Button Pressed");
-        await ChangeService.AddChangeAsync();
-        changes=await ChangeService.GetChangesAsync();
+        Console.WriteLine("AddNote " + id + " Pressed");
+        ;
     }
 }

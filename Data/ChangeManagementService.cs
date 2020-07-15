@@ -17,16 +17,16 @@ namespace ChangeManagement.Data
         
         public Task<List<Change>> GetChangesAsync()
         {
-            return Task.FromResult(_context.Set<Change>().FromSqlRaw("Select c.Id, c.Title, c.Description, c.CreatedOn from Changes c").ToList());
+            return Task.FromResult(_context.Set<Change>().FromSqlRaw("Select c.Id, c.Title, c.Description, c.Owner, c.CreatedOn from Changes c").ToList());
         }
         public Task DeleteChangesAsync()
         {
             return Task.FromResult(_context.Database.ExecuteSqlRaw("Delete From [dbo].[Changes] where 1=1"));
         }
-        public Task AddChangeAsync()
+        public Task AddChangeAsync(string title, string description, string owner)
         {
             Console.WriteLine("AddingChange");
-            return Task.FromResult(_context.Database.ExecuteSqlRaw("insert into dbo.Changes (Title, Description, Owner, CreatedOn) Values ('New!Change!', 'Description3','the change owner4',GetDate())"));
+            return Task.FromResult(_context.Database.ExecuteSqlRaw("insert into dbo.Changes (Title, Description, Owner, CreatedOn) Values ('"+ title + "', '" + description + "','"+ owner +"',GetDate())"));
         }
 
     }

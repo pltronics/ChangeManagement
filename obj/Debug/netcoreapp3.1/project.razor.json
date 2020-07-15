@@ -13,14 +13,14 @@
     "TagHelpers": [
       {
         "Kind": "Components.Component",
-        "Name": "ChangeManagement.Pages.Error",
+        "Name": "ChangeManagement.App",
         "AssemblyName": "ChangeManagement",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Error",
+            "TagName": "App",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -32,19 +32,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.Pages.Error"
+          "Common.TypeName": "ChangeManagement.App"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "ChangeManagement.Pages.Error",
+        "Name": "ChangeManagement.App",
         "AssemblyName": "ChangeManagement",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChangeManagement.Pages.Error",
+            "TagName": "ChangeManagement.App",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -56,7 +56,56 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.Pages.Error",
+          "Common.TypeName": "ChangeManagement.App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ChangeManagement.Pages.Counter",
+        "AssemblyName": "ChangeManagement",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChangeManagement.Pages.Counter"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ChangeManagement.Pages.Counter",
+        "AssemblyName": "ChangeManagement",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChangeManagement.Pages.Counter",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChangeManagement.Pages.Counter",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -160,14 +209,14 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "ChangeManagement.Pages.Counter",
+        "Name": "ChangeManagement.Pages.Error",
         "AssemblyName": "ChangeManagement",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Counter",
+            "TagName": "Error",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -179,19 +228,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.Pages.Counter"
+          "Common.TypeName": "ChangeManagement.Pages.Error"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "ChangeManagement.Pages.Counter",
+        "Name": "ChangeManagement.Pages.Error",
         "AssemblyName": "ChangeManagement",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChangeManagement.Pages.Counter",
+            "TagName": "ChangeManagement.Pages.Error",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -203,7 +252,7 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.Pages.Counter",
+          "Common.TypeName": "ChangeManagement.Pages.Error",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -351,55 +400,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ChangeManagement.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ChangeManagement.App",
-        "AssemblyName": "ChangeManagement",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.App"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ChangeManagement.App",
-        "AssemblyName": "ChangeManagement",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ChangeManagement.App",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
