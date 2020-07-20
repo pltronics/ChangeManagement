@@ -1,0 +1,92 @@
+@page "/addstake"
+
+@using ChangeManagement.Data
+@using ChangeManagement.Models
+@using System.ComponentModel.DataAnnotations
+@inject StakesService stakeService
+
+<button type="submit" class="btn btn-primary" @onclick="ShowModal">Add Stake </button>
+
+@if(showModal)
+{
+    <div class="modal" tabindex="-1" role="dialog" style="display:block" id="taskModal">
+        <div class="modal-dialog shadow-lg bg-white rounded" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Stake</h5>
+                    <button type="button" class="close" @onclick="Cancel" aria-label="Close">X</button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="stake" OnValidSubmit="AddaStake">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <div class="form-group row">
+                            <label class="col-8 col-form-label">Description:</label>
+                            <InputText @bind-Value="stake.Description" />
+                        </div>
+                            <div class="form-group row">
+                            <label class="col-8 col-form-label">Question:</label>
+                            <InputTextArea @bind-Value="stake.Question" />
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-8 col-form-label">Examples:</label>
+                            <InputText @bind-Value="stake.Examples" />
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-8 col-form-label">Signers:</label>
+                            <InputText @bind-Value="stake.Signers" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Add Stake</button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>    
+}
+@code{
+    bool showModal;
+    private void ShowModal()
+    {
+        showModal = true;
+    }
+
+    public void HandleValidSubmit()
+    {
+        showModal = false;
+    }
+    private void Cancel()
+    {
+        showModal = false;
+    }
+    public class Stake
+    {
+
+        [Required(ErrorMessage = "Description is required")]
+        public string Description {get; set;}
+
+        [Required(ErrorMessage = "Question is required")]
+        public string Question {get; set;}
+
+        public string Examples {get; set;}
+
+        [Required(ErrorMessage = "A signer is needed")]
+        public string Signers {get; set;}
+    }
+
+    Stake stake = new Stake();
+
+    protected override void OnInitialized()
+    {
+        stake.Description = "";
+        showModal = false;
+    }
+
+    protected async Task AddaStake()
+    {
+        Console.WriteLine("Button Pressed");
+        await stakeService.AddStakeAsync(stake.Description, stake.Question, stake.Examples, stake.Signers);
+    }
+}

@@ -4,6 +4,13 @@
 @using ChangeManagement.Models
 @inject StakesService StakeService
 
+<h1>
+    Stakes
+    <AddStake />
+</h1>
+
+
+
 @if (stakes == null)
 {
     <p><em>Loading...</em></p>

@@ -31,3 +31,26 @@ AS
 	Values (@StakeId, @Signer, GetDate(), @CreatedBy)
 GO
 */
+/*
+USE [ChangeManagementTest]
+Go
+
+Create Procedure [dbo].[AddStake]
+	@vchDescription varchar(50),
+	@vchQuestion varchar(255),
+	@vchExamples varchar(255),
+	@vchSigners varchar(50),
+	@vchCreatedBy varchar(50)
+
+AS
+
+Declare @intStakeId int 
+ 
+ Select @intStakeId = Max(Id)+1 from Stakes
+
+insert into Stakes (Id, Description, StartDate, CreatedBy) Values (@intStakeId, @vchDescription, GetDate(), @vchCreatedBy)
+
+insert into StakeQuestions (StakeId, Question, Examples, StartDate, CreatedBy) Values(@intStakeId, @vchQuestion, @vchExamples, GetDate(), @vchCreatedBy)
+
+insert into StakeSigners (StakeId, Signer, StartDate, CreatedBy) Values(@intStakeId, @vchSigners, GetDate(), @vchCreatedBy)
+*/

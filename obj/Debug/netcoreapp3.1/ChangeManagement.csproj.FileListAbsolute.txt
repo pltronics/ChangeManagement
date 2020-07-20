@@ -93,3 +93,7 @@ C:\Users\plucas\Git\ChangeManagement\bin\Debug\netcoreapp3.1\System.DirectorySer
 C:\Users\plucas\Git\ChangeManagement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.DirectoryServices.dll
 C:\Users\plucas\Git\ChangeManagement\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\AddChange.razor.g.cs
 C:\Users\plucas\Git\ChangeManagement\obj\Debug\netcoreapp3.1\Razor\Pages\AddChange.razor.g.cs
+C:\Users\plucas\Git\ChangeManagement\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\AddStake.razor.g.cs
+C:\Users\plucas\Git\ChangeManagement\obj\Debug\netcoreapp3.1\Razor\Pages\AddStake.razor.g.cs
+C:\Users\plucas\Git\ChangeManagement\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\AuthPage.razor.g.cs
+C:\Users\plucas\Git\ChangeManagement\obj\Debug\netcoreapp3.1\Razor\Pages\AuthPage.razor.g.cs

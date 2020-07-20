@@ -13,6 +13,9 @@
         "packagesPath": "C:\\Users\\plucas\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\plucas\\Git\\ChangeManagement\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\plucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],

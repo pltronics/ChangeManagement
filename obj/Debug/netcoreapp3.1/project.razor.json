@@ -13,14 +13,14 @@
     "TagHelpers": [
       {
         "Kind": "Components.Component",
-        "Name": "ChangeManagement.App",
+        "Name": "ChangeManagement.Pages.Error",
         "AssemblyName": "ChangeManagement",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App",
+            "TagName": "Error",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -32,19 +32,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.App"
+          "Common.TypeName": "ChangeManagement.Pages.Error"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "ChangeManagement.App",
+        "Name": "ChangeManagement.Pages.Error",
         "AssemblyName": "ChangeManagement",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChangeManagement.App",
+            "TagName": "ChangeManagement.Pages.Error",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -56,7 +56,7 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.App",
+          "Common.TypeName": "ChangeManagement.Pages.Error",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -111,55 +111,6 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "ChangeManagement.Pages.Stakes",
-        "AssemblyName": "ChangeManagement",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Stakes",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.Pages.Stakes"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "ChangeManagement.Pages.Stakes",
-        "AssemblyName": "ChangeManagement",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ChangeManagement.Pages.Stakes",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.Pages.Stakes",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
         "Name": "ChangeManagement.Pages.Cancel",
         "AssemblyName": "ChangeManagement",
         "Documentation": null,
@@ -209,14 +160,14 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "ChangeManagement.Pages.Error",
+        "Name": "ChangeManagement.Pages.AddStake",
         "AssemblyName": "ChangeManagement",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Error",
+            "TagName": "AddStake",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -228,19 +179,19 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.Pages.Error"
+          "Common.TypeName": "ChangeManagement.Pages.AddStake"
         }
       },
       {
         "Kind": "Components.Component",
-        "Name": "ChangeManagement.Pages.Error",
+        "Name": "ChangeManagement.Pages.AddStake",
         "AssemblyName": "ChangeManagement",
         "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChangeManagement.Pages.Error",
+            "TagName": "ChangeManagement.Pages.AddStake",
             "ParentTag": null,
             "TagStructure": 0,
             "Attributes": [],
@@ -252,7 +203,56 @@
         "Diagnostics": [],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChangeManagement.Pages.Error",
+          "Common.TypeName": "ChangeManagement.Pages.AddStake",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ChangeManagement.Pages.AuthPage",
+        "AssemblyName": "ChangeManagement",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AuthPage",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChangeManagement.Pages.AuthPage"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ChangeManagement.Pages.AuthPage",
+        "AssemblyName": "ChangeManagement",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChangeManagement.Pages.AuthPage",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChangeManagement.Pages.AuthPage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -351,6 +351,55 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ChangeManagement.Pages.AddChange",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ChangeManagement.Pages.Stakes",
+        "AssemblyName": "ChangeManagement",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Stakes",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChangeManagement.Pages.Stakes"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ChangeManagement.Pages.Stakes",
+        "AssemblyName": "ChangeManagement",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChangeManagement.Pages.Stakes",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChangeManagement.Pages.Stakes",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -581,6 +630,55 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ChangeManagement.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ChangeManagement.App",
+        "AssemblyName": "ChangeManagement",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChangeManagement.App"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "ChangeManagement.App",
+        "AssemblyName": "ChangeManagement",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChangeManagement.App",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChangeManagement.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -21109,6 +21207,11 @@
       "FileKind": "component"
     },
     {
+      "FilePath": "c:\\Users\\plucas\\Git\\ChangeManagement\\Pages\\AddStake.razor",
+      "TargetPath": "Pages\\AddStake.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "c:\\Users\\plucas\\Git\\ChangeManagement\\Pages\\FetchData.razor",
       "TargetPath": "Pages\\FetchData.razor",
       "FileKind": "component"
@@ -21126,6 +21229,11 @@
     {
       "FilePath": "c:\\Users\\plucas\\Git\\ChangeManagement\\Shared\\NavMenu.razor",
       "TargetPath": "Shared\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Users\\plucas\\Git\\ChangeManagement\\Pages\\AuthPage.razor",
+      "TargetPath": "Pages\\AuthPage.razor",
       "FileKind": "component"
     },
     {

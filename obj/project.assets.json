@@ -5446,7 +5446,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\plucas\\.nuget\\packages\\": {}
+    "C:\\Users\\plucas\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5457,6 +5458,9 @@
       "packagesPath": "C:\\Users\\plucas\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\plucas\\Git\\ChangeManagement\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\plucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
