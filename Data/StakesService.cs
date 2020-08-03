@@ -25,11 +25,6 @@ namespace ChangeManagement.Data
         public Task AddStakeAsync(string description, string question, string examples, string signers)
         {
             Console.WriteLine("Adding Stake");
-            var desc = new SqlParameter("@vchDescription", description);
-            var ques = new SqlParameter("@vchQuestion", question);
-            var exam = new SqlParameter("@vchexamples", examples);
-            var sign = new SqlParameter("@vchSigners", signers);
-            var creat = new SqlParameter("@vchCreatedBy", DateTime.Now.ToString("MM-DD-yyyy"));
             return Task.FromResult(_context.Database.ExecuteSqlRaw(
                 "Execute AddStake '" + 
                     description + "', '" +

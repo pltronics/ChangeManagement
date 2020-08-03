@@ -48,7 +48,7 @@ Declare @intStakeId int
  
  Select @intStakeId = Max(Id)+1 from Stakes
 
-insert into Stakes (Id, Description, StartDate, CreatedBy) Values (@intStakeId, @vchDescription, GetDate(), @vchCreatedBy)
+insert into Stakes (Description, StartDate, CreatedBy) Values (@vchDescription, GetDate(), @vchCreatedBy)
 
 insert into StakeQuestions (StakeId, Question, Examples, StartDate, CreatedBy) Values(@intStakeId, @vchQuestion, @vchExamples, GetDate(), @vchCreatedBy)
 

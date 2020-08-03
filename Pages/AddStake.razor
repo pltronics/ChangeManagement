@@ -88,5 +88,6 @@
     {
         Console.WriteLine("Button Pressed");
         await stakeService.AddStakeAsync(stake.Description, stake.Question, stake.Examples, stake.Signers);
+        OnInitialized();
     }
 }
