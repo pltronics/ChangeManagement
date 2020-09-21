@@ -46,7 +46,7 @@ AS
 
 Declare @intStakeId int 
  
- Select @intStakeId = Max(Id)+1 from Stakes
+ Select @intStakeId = isnull(Max(Id), 0)+1 from Stakes
 
 insert into Stakes (Description, StartDate, CreatedBy) Values (@vchDescription, GetDate(), @vchCreatedBy)
 

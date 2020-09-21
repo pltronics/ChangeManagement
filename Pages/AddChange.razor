@@ -1,7 +1,6 @@
 @page "/addchange"
 
 @using ChangeManagement.Data
-@using ChangeManagement.Models
 @using System.ComponentModel.DataAnnotations;
 @inject ChangeManagementService ChangeService
 <button type="submit" class="btn btn-primary" @onclick="ShowModal">Add Change</button>
@@ -19,15 +18,15 @@
                         <DataAnnotationsValidator />
                         <ValidationSummary />
                         <div class="form-group row">
-                            <label class="col-8 col-form-label">Title:</label>
+                            <label class="col-12 col-form-label" style="text-align:center">Title:</label>
                             <InputText @bind-Value="change.Title" />
                         </div>
                             <div class="form-group row">
-                            <label class="col-8 col-form-label">Description:</label>
-                            <InputTextArea @bind-Value="change.Description" />
+                            <label class="col-12 col-form-label" style="text-align:center">Description:</label>
+                            <InputTextArea class="col-12" rows="4" @bind-Value="change.Description" />
                         </div>
                         <div class="form-group row">
-                            <label class="col-8 col-form-label">Owner:</label>
+                            <label class="col-12 col-form-label" style="text-align:center">Owner:</label>
                             <InputText @bind-Value="change.Owner" />
                         </div>
                         <div class="modal-footer">

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vR7W5lq8usp4FBE27316ogEiOfYLkcy5sDwv91EaninskK2SAqGKvZDu2DZJgvn/GuqFvNBZ2XWqzg/4Kb4d9Q==",
+  "dgSpecHash": "SYJacvTkihOVPmRYGHzdckiIVu+pNaG91Ce0bR2ULDLtF5Rx2UfMB8SZes/KjLhmImz0fszS9J5liRkA1MqLxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\plucas\\Git\\ChangeManagement\\ChangeManagement.csproj",
+  "projectFilePath": "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\plucas\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\plucas\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
