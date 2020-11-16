@@ -18,6 +18,7 @@ namespace ChangeManagement.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Change>().HasNoKey();
+            modelBuilder.Entity<Note>().HasNoKey();
             //modelBuilder.Entity<Stake>().HasNoKey();
         }
         

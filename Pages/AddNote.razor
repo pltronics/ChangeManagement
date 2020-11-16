@@ -1,0 +1,71 @@
+@page "/addnote"
+
+@using ChangeManagement.Data
+@using ChangeManagement.Models
+@using System.ComponentModel.DataAnnotations
+@inject ChangeManagementService ChangeService
+
+<div id="table-wrapper">
+<div id="table-scroll">
+@if (notes == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <table class="table">
+        <thead class="sticky-top">
+            <tr>
+                <th>Note</th>
+                <th>Created By</th>
+                <th>Created On</th>
+            </tr>
+        </thead>
+        <tbody class="sticky-third">
+            @foreach (var n in notes)
+            {
+                <tr>
+                    <td>@n.Text</td>
+                    <td>@n.Creator</td>
+                    <td>@n.CreatedOn</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+</div>
+</div>
+<EditForm Model="note" OnValidSubmit="AddaNote">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group row">
+        <InputTextArea style="width: 100%; height: 200px" @bind-Value="note.Text" />
+    </div>
+    <div class="form-group row float-right">
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </div>
+</EditForm>
+
+
+@code{
+    [Parameter]
+    public int Id { get; set; }
+    public string Title { get; set; }
+    IList<Note> notes = new List<Note>();
+    protected override async Task OnInitializedAsync()
+	{
+        notes = await ChangeService.GetNotesAsync(Id);
+	}
+    Note note = new Note();
+    protected void AddaNote()
+    {
+        Console.WriteLine(Id);
+    }
+    /*protected async Task AddaNote()
+    {
+        Console.WriteLine("Button Pressed");
+        
+        await ChangeService.GetChangesAsync();
+    }*/
+}

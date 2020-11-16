@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement.csproj": {}
+    "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement\\ChangeManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement.csproj": {
+    "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement\\ChangeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement.csproj",
+        "projectUniqueName": "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement\\ChangeManagement.csproj",
         "projectName": "ChangeManagement",
-        "projectPath": "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement.csproj",
+        "projectPath": "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement\\ChangeManagement.csproj",
         "packagesPath": "C:\\Users\\plucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\plucas\\ChangeManagement\\obj\\",
+        "outputPath": "C:\\Users\\plucas\\ChangeManagement\\ChangeManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\plucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -36,6 +36,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Blazored.Modal": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"

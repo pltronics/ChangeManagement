@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using ChangeManagement.Data;
+using Blazored.Modal;
 
 namespace ChangeManagement
 {
@@ -38,6 +39,7 @@ namespace ChangeManagement
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DbConn")));
             services.AddHttpContextAccessor();
+            services.AddBlazoredModal();
             
         }
 

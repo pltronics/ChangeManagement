@@ -4,6 +4,7 @@
 @using ChangeManagement.Models
 @using System.ComponentModel.DataAnnotations;
 @inject ChangeManagementService ChangeService
+@inject IModalService Modal
 
 <h1>Changes 
 <button class="btn btn-primary" @onclick="ClearChanges">Clear List</button>
@@ -42,8 +43,8 @@ else
                     <td>@change.Description</td>
                     <td>@change.Owner</td>
                     <td>@change.CreatedOn</td>
-                    <td><button class="btn btn-primary" @onclick="(() => AddNotes(change.Id))">Add Notes</button></td>
-                    <td><button class="btn btn-primary">Sign Off</button></td>
+                    <td><button class="btn btn-primary" @onclick="(() => AddNotes(change.Id, change.Title))">Add Notes</button>
+                        <button class="btn btn-primary">Sign Off</button></td>
                 </tr>
             }
         </tbody>
@@ -64,9 +65,11 @@ else
         await ChangeService.DeleteChangesAsync();
         changes = await ChangeService.GetChangesAsync();
     }
-    protected void AddNotes(int id)
+    protected void AddNotes(int id, string title)
     {
-        Console.WriteLine("AddNote " + id + " Pressed");
-        ;
+        Console.WriteLine("AddNote " + id + " Pressed for " + title);
+        var parameters = new ModalParameters();
+        parameters.Add("Id", id);
+        Modal.Show<AddNote>(title, parameters);
     }
 }
